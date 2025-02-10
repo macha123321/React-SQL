@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import '../index.css';
 import SettingSelector from './SettingSelector';
 import WorkoutList from './WorkoutList';
 
@@ -50,6 +51,7 @@ const Dashboard = () => {
         onToggleCompletion={toggleWorkoutCompletion}
       />
     )}
+    <Link to='/'>Main Menu</Link>
   </div>
   )
 }

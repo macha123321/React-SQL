@@ -23,7 +23,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div class='main-container'>
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
         <input type='text' placeholder='Username' value={username} onChange={(e) => setUsername(e.target.value)} required />
@@ -33,7 +33,7 @@ const Login = () => {
         <button type='submit'>Login</button>
       </form>
       <br />
-      <Link to='/'>Main Menu</Link>
+      <Link to='/Register'>Don't have an account?</Link> | <Link to='/'>Main Menu</Link>
     </div>
   );
 };

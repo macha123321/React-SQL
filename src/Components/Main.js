@@ -21,15 +21,15 @@ const Main = () => {
     
     
     
-        <>
+        <div class='main-container'>
         <h1>Main Menu</h1>
         <button onClick={Log}>Login Page</button>
-        <br /><br /><br />
+        <br />
         <button onClick={Reg}>Register Page</button>
-        <br /><br /><br />
+        <br />
         <button onClick={Data}>Data Page</button>
-        <br /><br /><br />
-        </>
+        <br />
+        </div >
 
   )
 }

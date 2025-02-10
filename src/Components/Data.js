@@ -21,12 +21,12 @@ const Data = () => {
   }, []);
 
   return (
-    <div className="App">
+    <div className="App main-container">
       <h1>Data from MySQL</h1>
       {data.length === 0 ? (
         <p>No data available</p>
       ) : (
-        <div>
+        <div class='secondary-container'>
           {data.map(item => (
             <div key={item.userID} style={{ marginBottom: '10px' }}>
               <p><strong>Username:</strong> {item.username}</p>

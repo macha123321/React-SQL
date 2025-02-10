@@ -31,7 +31,8 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div class='main-container'>
+      
       <h2>Register</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <form onSubmit={handleRegister}>
@@ -46,7 +47,7 @@ const Register = () => {
         <button type='submit'>Register</button>
       </form>
       <br />
-      <Link to='/'>Main Menu</Link>
+      <Link to='/Login'>Already have an account?</Link> | <Link to='/'>Main Menu</Link>
     </div>
   );
 };
