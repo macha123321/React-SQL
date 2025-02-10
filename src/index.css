@@ -40,7 +40,18 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   align-items: center;
-  text-align: center;
+  text-align: left;
+}
+
+.single-container {
+  font-family: "Signika Negative", sans-serif;
+  background-color: rgb(224, 224, 224);
+  max-width: 1000px;
+  margin: 30px auto;
+  overflow: auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 button {

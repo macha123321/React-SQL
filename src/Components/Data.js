@@ -28,7 +28,7 @@ const Data = () => {
       ) : (
         <div class='secondary-container'>
           {data.map(item => (
-            <div key={item.userID} style={{ marginBottom: '10px' }}>
+            <div key={item.userID} class='single-container' style={{ marginBottom: '10px' }}>
               <p><strong>Username:</strong> {item.username}</p>
               <p><strong>Name:</strong> {item.name}</p>
               <p><strong>Password:</strong> {item.password}</p>
