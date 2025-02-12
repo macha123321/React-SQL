@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
@@ -16,6 +16,7 @@ const Login = () => {
     });
     const data = await response.json();
     if (response.ok) {
+      localStorage.setItem('user', JSON.stringify(data.user));
       navigate('/Dashboard');
     } else {
       alert(data.message);

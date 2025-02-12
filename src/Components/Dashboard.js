@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import '../index.css';
+import { useNavigate } from 'react-router-dom';
 import SettingSelector from './SettingSelector';
 import WorkoutList from './WorkoutList';
 
@@ -25,6 +26,15 @@ const workoutsData = {
 const Dashboard = () => {
   const [selectedSetting, setSelectedSetting] = useState(null);
   const [completedWorkouts, setCompletedWorkouts] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const user = localStorage.getItem('user');
+    if (!user) {
+      navigate('/Login');
+    }
+  }, [navigate]);
+
 
   const handleSettingChange = (setting) => {
     setSelectedSetting(setting);

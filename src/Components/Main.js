@@ -1,7 +1,13 @@
-import React from 'react';
+import React , {useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
+  useEffect(() => {
+    return () => {
+      localStorage.clear();
+    };
+  }, []);
+
     const navigate = useNavigate();
     
     const Log = () => {
